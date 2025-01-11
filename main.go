@@ -32,6 +32,7 @@ type thumbnail struct {
 var videoThumbnails = map[uuid.UUID]thumbnail{}
 
 func main() {
+	videoThumbnails = make(map[uuid.UUID]thumbnail)
 	godotenv.Load(".env")
 
 	pathToDB := os.Getenv("DB_PATH")
